@@ -2,7 +2,8 @@
 public class CestaDeCompras {
 	
 	private int codigo;
-	private Produto[] lista = new Produto[5];
+	//private Produto[] lista = new Produto[5];
+	private ArrayList <Produto> carrinho = new ArrayList <Produto>;
 	
 	private int i;
 
@@ -11,8 +12,13 @@ public class CestaDeCompras {
 	}
 	
 	public void incluir(Produto p ) throws ProdutoRepetidoException{
+		if(lista.contains(p) == true)
+		throw new ProdutoRepetidoException(p); // dispara a excessão (um alarme de erro)
 		
+		carrinho.add(p);
+	
 		
+		/*
 		for(int j = 0; j <this.i; j++){
 			
 			if( p.equals(lista[j]))
@@ -21,8 +27,7 @@ public class CestaDeCompras {
 		}
 			
 		lista[this.i ++] = p;
-		
-		
+		*/
 	}
 	
 	
