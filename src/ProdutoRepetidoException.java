@@ -13,14 +13,4 @@ public class ProdutoRepetidoException extends Exception {
 	public Produto getTratar() {
 		return tratar;
 	}
-
-
-
-	public void setTratar(Produto tratar) {
-		this.tratar = tratar;
-	}
-	
-	
-	
-	
 }
